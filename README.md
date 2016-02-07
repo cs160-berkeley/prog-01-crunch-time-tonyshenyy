@@ -1,22 +1,19 @@
 # PROG 01: Crunch Time
 
-Briefly describe your app here.
+This is an exercise-calorie conversion app. It takes the input from users about their weight, amount of exercises and type of exercises they did, and it outputs the calories that users have burned. Also, the app is capable of the reverse way in which the users input weight and amount of calories they want to burn, and then the app will provide the type and amount of exercises our users need to do.
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Yiyang Shen ([yshen@berkeley.edu](mailto:yshen@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See [Crunch Time] (https://youtu.be/PV3eJ11CW5c)
 
 ## Screenshots
 
-<img src="screenshots/main.png" height="400" alt="Screenshot"/>
+<img src="screenshots/cover_photo.png" height="400" alt="Screenshot"/>
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Any other support
-
-*Feel free to enhance your README. For Markdown syntax, see [the GitHub Guides](https://guides.github.com/features/mastering-markdown/). Remove this line in your submission.*
+* Special thanks to stackoverflow of the amazing community support!

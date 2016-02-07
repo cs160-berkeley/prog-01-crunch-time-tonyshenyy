@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.tony.crunchtime.MainActivity"
+        tools:showIn="@layout/activity_main">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/amount"
+            android:textSize="20dp"
+            android:hint="amount"
+            android:width="200dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/weight"
+            android:layout_alignEnd="@+id/textView11"
+            android:paddingTop="20dp"
+            android:layout_toEndOf="@+id/textView7" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/unit"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:layout_toEndOf="@+id/amount"
+            android:layout_toRightOf="@+id/amount"
+            android:layout_alignBaseline="@+id/amount"
+            android:text="Reps" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exerciseSelection"
+            android:layout_below="@+id/amount"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate Calorie"
+            android:id="@+id/calculate"
+            android:layout_below="@+id/exerciseSelection"
+            android:layout_centerHorizontal="true"
+            android:background="#ed3232"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="calories burnt"
+            android:id="@+id/textView2"
+            android:textSize="20dp"
+            android:layout_below="@+id/calculate"
+            android:layout_alignParentEnd="true" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/calories"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:text="0"
+            android:width="150dp"
+            android:layout_below="@+id/calculate"
+            android:layout_alignParentStart="true"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_toStartOf="@+id/textView2" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate Exercise"
+            android:id="@+id/update"
+            android:layout_below="@+id/calories"
+            android:layout_centerHorizontal="true"
+            android:background="#3f59cd" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/pushupAmount"
+            android:layout_below="@+id/update"
+            android:layout_toStartOf="@+id/textView4"
+            android:textSize="20dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reps pushup"
+            android:id="@+id/textView4"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/pushupAmount"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reps situp"
+            android:id="@+id/textView3"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView4"
+            android:layout_toEndOf="@+id/update"
+            android:layout_alignLeft="@+id/textView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reps squats"
+            android:id="@+id/textView5"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/squatsAmount"
+            android:layout_alignStart="@+id/textView3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reps pullup"
+            android:id="@+id/textView6"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentEnd="true"
+            android:textSize="20dp"
+            android:layout_alignLeft="@+id/textView5" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/situpAmount"
+            android:textSize="20dp"
+            android:layout_below="@+id/pushupAmount"
+            android:layout_toStartOf="@+id/textView3"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/squatsAmount"
+            android:textSize="20dp"
+            android:layout_below="@+id/situpAmount"
+            android:textAlignment="center"
+            android:layout_toStartOf="@+id/textView5" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/pullupAmount"
+            android:textSize="20dp"
+            android:layout_below="@+id/squatsAmount"
+            android:layout_alignStart="@+id/squatsAmount"
+            android:textAlignment="center"
+            android:layout_toLeftOf="@+id/textView6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I did"
+            android:id="@+id/textView7"
+            android:textSize="20dp"
+            android:layout_below="@+id/weight"
+            android:layout_alignParentStart="true"
+            android:layout_alignBaseline="@+id/amount" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My weight is"
+            android:id="@+id/textView"
+            android:textSize="20dp"
+            android:layout_alignTop="@+id/textView16"
+            android:layout_alignParentStart="true"
+            android:layout_alignBaseline="@+id/textView16" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/weight"
+            android:hint="weight"
+            android:textSize="20dp"
+            android:width="180dp"
+            android:textAlignment="center"
+            android:layout_alignBaseline="@+id/textView16"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_toEndOf="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mins jumping jack"
+            android:id="@+id/textView8"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mins jogging"
+            android:id="@+id/textView9"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView8"
+            android:layout_alignStart="@+id/textView8" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/jjAmount"
+            android:textSize="20dp"
+            android:layout_below="@+id/pullupAmount"
+            android:layout_alignStart="@+id/pullupAmount"
+            android:layout_toStartOf="@+id/textView8"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/joggingAmount"
+            android:textSize="20dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/textView8"
+            android:layout_alignStart="@+id/jjAmount"
+            android:layout_toStartOf="@+id/textView9"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mins leg-lift"
+            android:id="@+id/textView10"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView9"
+            android:layout_alignStart="@+id/textView9" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/legliftAmount"
+            android:textSize="20dp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/joggingAmount"
+            android:layout_alignStart="@+id/joggingAmount"
+            android:textAlignment="center"
+            android:layout_toStartOf="@+id/textView10" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mins plank"
+            android:id="@+id/textView11"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView10"
+            android:layout_alignStart="@+id/textView10" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/plankAmount"
+            android:textSize="20dp"
+            android:textIsSelectable="false"
+            android:layout_alignTop="@+id/textView11"
+            android:layout_alignStart="@+id/legliftAmount"
+            android:layout_toStartOf="@+id/textView11"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mins cycling"
+            android:id="@+id/textView12"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView11"
+            android:layout_alignStart="@+id/textView11" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/cyclingAmount"
+            android:textSize="20dp"
+            android:textIsSelectable="false"
+            android:layout_alignTop="@+id/textView12"
+            android:layout_alignStart="@+id/plankAmount"
+            android:textAlignment="center"
+            android:layout_toStartOf="@+id/textView12" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mins walking"
+            android:id="@+id/textView13"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView12"
+            android:layout_alignStart="@+id/textView12" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/walkingAmount"
+            android:textSize="20dp"
+            android:textIsSelectable="false"
+            android:layout_alignTop="@+id/textView13"
+            android:layout_alignStart="@+id/cyclingAmount"
+            android:textAlignment="center"
+            android:layout_toStartOf="@+id/textView13" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mins swimming"
+            android:id="@+id/textView14"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView13"
+            android:layout_alignStart="@+id/textView13" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/swimAmount"
+            android:textSize="20dp"
+            android:textIsSelectable="false"
+            android:layout_alignTop="@+id/textView14"
+            android:layout_alignStart="@+id/walkingAmount"
+            android:layout_toStartOf="@+id/textView13"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mins stair climbing"
+            android:id="@+id/textView15"
+            android:textSize="20dp"
+            android:layout_below="@+id/textView14"
+            android:layout_alignStart="@+id/textView14" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:id="@+id/scAmount"
+            android:textSize="20dp"
+            android:textIsSelectable="false"
+            android:layout_alignTop="@+id/textView15"
+            android:layout_alignStart="@+id/swimAmount"
+            android:layout_toStartOf="@+id/textView15"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="lb"
+            android:id="@+id/textView16"
+            android:textSize="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/textView3"
+            android:layout_marginTop="52dp" />
+
+    </RelativeLayout>
+</ScrollView>
